@@ -1,0 +1,254 @@
+/* Navbar */
+nav {
+    background-color: #333;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Melhorias */
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centralizar verticalmente */
+}
+
+nav ul li {
+    margin: 0 0.5em;
+}
+
+nav ul li a {
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Content Container */
+#content {
+    padding: 2em;
+}
+
+/* Section */
+.section {
+    display: none;
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 1em;
+}
+
+/* Form */
+#note-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#note-form label {
+    margin-top: 1em;
+}
+
+#note-form input,
+#note-form textarea,
+#note-form button {
+    padding: 0.8em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease; /* Transição para a cor da borda */
+}
+
+#note-form input:focus,
+#note-form textarea:focus {
+    border-color: #555; /* Cor da borda ao focar */
+}
+
+#note-form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#note-form button:hover {
+    background-color: #555;
+}
+
+/* Topics Container */
+#topics-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Topic */
+.topic {
+    margin-top: 1em;
+    border: 1px solid #ccc;
+    padding: 1em;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+/* Notes List */
+#notes-list {
+    margin-top: 2em;
+}
+
+/* Note Item */
+.note-item {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.note-item h3 {
+    margin: 0;
+    color: #333;
+}
+
+.note-item p {
+    margin: 0.5em 0;
+    color: #666;
+}
+
+.note-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 1em;
+}
+
+.note-item button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-right: 1em; /* Adiciona margem à direita para espaçamento entre os botões */
+}
+
+
+.note-item button:hover {
+    background-color: #555;
+}
+
+/* Opened Note */
+#opened-note {
+    margin-top: 2em;
+}
+
+#opened-note input, #opened-note textarea, #opened-note button {
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#opened-note button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 
+    0.3s ease;
+}
+
+#opened-note button:hover {
+    background-color: #555;
+}
+
+#opened-note img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 1em;
+}
+
+/* Media Queries para Responsividade */
+
+/* Tablets e dispositivos menores */
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 0 0.3em; /* Reduz a margem entre os itens do menu */
+    }
+
+    .note-item button {
+        margin-right: 0.5em; /* Reduz a margem entre os botões das notas */
+    }
+}
+
+/* Smartphones e dispositivos menores */
+@media (max-width: 576px) {
+    nav ul li {
+        margin: 0 0.2em; /* Reduz ainda mais a margem entre os itens do menu */
+    }
+
+    .note-item button {
+        margin-right: 0.3em; /* Reduz ainda mais a margem entre os botões das notas */
+    }
+
+    #content {
+        padding: 1em; /* Reduz o padding do conteúdo */
+    }
+
+    .section {
+        padding: 1em; /* Reduz o padding das seções */
+    }
+
+    #note-form input,
+    #note-form textarea,
+    #note-form button {
+        padding: 0.5em; /* Reduz o padding dos campos do formulário */
+        margin-top: 0.3em; /* Reduz a margem superior dos campos do formulário */
+    }
+
+    .topic {
+        padding: 0.5em; /* Reduz o padding dos tópicos */
+        margin-top: 0.5em; /* Aumenta a margem superior dos tópicos */
+    }
+
+    #opened-note input,
+    #opened-note textarea,
+    #opened-note button {
+        padding: 0.5em; /* Reduz o padding dos campos do formulário aberto */
+        margin-top: 0.3em; /* Reduz a margem superior dos campos do formulário aberto */
+    }
+}

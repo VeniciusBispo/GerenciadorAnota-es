@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Anotações</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="lapis.png" type="image/png"> <!-- Adicionar o ícone do site -->
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="#" id="nav-home">Início</a></li>
+            <li><a href="#" id="nav-create">Criar Anotação</a></li>
+            <li><a href="#" id="nav-view">Ver Anotações</a></li>
+            <li><a href="#" id="nav-open">Abrir Anotação</a></li>
+        </ul>
+    </nav>
+    <div id="content">
+        <div id="home" class="section">
+            <h2>Bem-vindo ao Gerenciador de Anotações</h2>
+            <p>Utilize o menu acima para navegar pelas funcionalidades do site. </p>
+            <p> Você pode criar novas anotações, visualizar suas anotações existentes e abrir arquivos de anotações salvas e baixar o arquivo .txt que você deseja.</p>
+            <img src="lapis.png" alt="Lápis" style="max-width: 100px;"> <!-- Adicionar a imagem abaixo do último parágrafo -->
+        </div>
+        <div id="create-note" class="section">
+            <h2>Criar Anotação</h2>
+            <form id="note-form">
+                <label for="note-title">Título:</label>
+                <input type="text" id="note-title" required>
+                
+                <label for="note-content">Conteúdo:</label>
+                <textarea id="note-content" required></textarea>
+                
+                <label for="note-image">Anexar Imagem:</label>
+                <input type="file" id="note-image" accept="image/*">
+                
+                <label for="note-topics">Tópicos:</label>
+                <div id="topics-container">
+                    <div class="topic">
+                        <input type="text" class="topic-title" placeholder="Título do Tópico">
+                        <textarea class="topic-content" placeholder="Conteúdo do Tópico"></textarea>
+                    </div>
+                </div>
+                <button type="button" id="add-topic">Adicionar Tópico</button>
+                
+                <button type="submit">Salvar Anotação</button>
+            </form>
+        </div>
+        <div id="view-notes" class="section">
+            <h2>Anotações</h2>
+            <input type="text" id="search-notes" placeholder="Buscar anotações...">
+            <div id="notes-list"></div>
+        </div>
+        <div id="open-notes" class="section">
+            <h2>Abrir Anotação</h2>
+            <input type="file" id="open-txt-file" accept=".txt">
+            <div id="opened-note"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
